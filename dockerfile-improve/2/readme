@@ -1,0 +1,12 @@
+docker build -t go-test:v1 .
+docker run -itd -p 8080:8080 --name=go-test go-test:v1
+docker exec -it go-test bash
+ldd hello
+docker stop go-test
+docker rm go-test
+
+ä¯ÀÀÆ÷·ÃÎÊ : http://192.168.20.212:8080/
+docker build -t go-test:v2 -f Dockerfile-slim .
+docker run -itd -p 8080:8080 go-test:v2
+docker stop go-test
+docker rm go-test

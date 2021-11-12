@@ -1,0 +1,2 @@
+docker build -t test:1.0 -f Dockerfile .
+docker build -t test:2.0 -f Dockerfile-slim .
